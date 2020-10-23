@@ -59,7 +59,7 @@ public class Bot extends TelegramLongPollingBot {
             scheduledFuture.cancel(false);
         }
         for (Integer chatID : chatIDs) {
-            scheduledFutureArrayList.add(scheduler.scheduleAtFixedRate(new WeatherTask(chatID), 0, 5, TimeUnit.SECONDS));
+            scheduledFutureArrayList.add(scheduler.scheduleAtFixedRate(new WeatherTask(chatID), 0, Integer.parseInt(PersonData.SUB_NOT_INT.get()) , TimeUnit.HOURS));
         }
     }
 

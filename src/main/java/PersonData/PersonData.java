@@ -8,6 +8,7 @@ public enum PersonData {
     DB_NAME(""), // MySQL database name
     BOT_NAME(""), // Telegram bot name
     BOT_API_KEY(""),//Telegram Bot Token
+    SUB_NOT_INT("12") //subscription notification interval in hours
     ;
     private final String value;
     public String get(){
